@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+coverage = "*"
+twine = "*"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+test = "python -m unittest discover -s tests"
+coverage = "coverage run -a -m unittest discover -s tests/"
+coverage-html =  "coverage html --include=\"pycdi/*,examples/*\""
+coverage-xml = "coverage xml --include=\"pycdi/*,examples/*\""
